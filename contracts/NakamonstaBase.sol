@@ -53,6 +53,7 @@ contract NakamonstaBase is NakamonstaERC721 {
     Nakamonsta memory nakamonsta = Nakamonsta(_name, _genes, uint64(now), uint64(now), _motherId, _fatherId);
     // Add it to the array of nakamonstas and get its id
     uint nakamonstaId = nakamonstas.push(nakamonsta) - 1;
+//*    nakamonstas[nakamonstaId] = nakamonsta;
     // Call the ERC721 _mint function, assign nakamonstaId to it's new owner, it will also emit a Transfer event.
     _mint(_to, nakamonstaId);
     emit NakamonstaBirth(nakamonstaId, _name, _genes);

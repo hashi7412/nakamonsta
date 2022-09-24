@@ -34,10 +34,10 @@ contract NakamonstaAuction is NakamonstaMating {
   function createAuction(uint _tokenId, uint128 _startPrice, uint128 _endPrice, uint128 _duration)
   public isOwnerOf(_tokenId) isReady(_tokenId) {
     // Check inputs
-    require(_startPrice >= minimumPrice, "start price must be greater or equal to the minimum price");
-    require(_endPrice >= minimumPrice, "end price must be greater or equal to the minimum price");
-    require(_duration >= 1 hours, "duration must be minimum 1 hour");
-    require(_duration <= 100 * 365 days, "duration must be maximum 100 years");
+//*    require(_startPrice >= minimumPrice, "start price must be greater or equal to the minimum price");
+//*    require(_endPrice >= minimumPrice, "end price must be greater or equal to the minimum price");
+//*    require(_duration >= 1 hours, "duration must be minimum 1 hour");
+//*    require(_duration <= 100 * 365 days, "duration must be maximum 100 years");
     // Check _tokendId is not Auctioned already
     require(!_auctionExists(auctionByTokenId[_tokenId]), "Auction already exists");
     require(now >= nakamonstas[_tokenId].readyDate, "Nakamonsta is not ready yet");

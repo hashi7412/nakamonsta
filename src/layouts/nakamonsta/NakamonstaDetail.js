@@ -112,7 +112,7 @@ class NakamonstaDetail extends Component {
   render() {
     return (
       <div className="content">
-        <h1>Nakamonsta</h1>
+        <h1>BeauMind</h1>
         <Grid container spacing={16}>
           <Grid item>
             <NakamonstaCard detailed={true} nakamonstaId={this.nakamonstaId} />

@@ -1,0 +1,21 @@
+version: '3.7'
+
+services:
+  geth:
+    image: ethereum/client-go
+    network_mode: host
+    ports: 
+      - '30303:30303'
+    command: --dev --http --http.addr="0.0.0.0"
+  
+  webapp:
+    image: node:10.24.0-buster
+    network_mode: host
+    working_dir: /home/node/app
+    volumes:
+      - ./:/home/node/app
+    command: ./docker-entrypoint.sh
+    ports: 
+      - '3000:3000'
+    depends_on: 
+      - geth

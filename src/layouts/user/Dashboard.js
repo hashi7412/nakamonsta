@@ -36,7 +36,7 @@ class Dashboard extends Component {
       <div className="content">
         <h1>Dashboard</h1>
         You own {this.state.balance} nakamonstas
-        <h2>Your Nakamonstas</h2>
+        <h2>Your BeauMind</h2>
         <NakamonstaUserOwnedGrid />
       </div>
     );

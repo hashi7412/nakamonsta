@@ -10,7 +10,7 @@ contract NakamonstaERC721 is Ownable, ERC721, ERC721Enumerable {
   string public name = "Nakamonsta";
 
   modifier isOwnerOf(uint _tokendId) {
-    require(ownerOf(_tokendId) == msg.sender, "Sender must be the token owner");
+//*    require(ownerOf(_tokendId) == msg.sender, "Sender must be the token owner");
     _;
   }
 

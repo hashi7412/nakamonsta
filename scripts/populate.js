@@ -125,14 +125,16 @@ async function transferSomeToAccount1() {
 
 async function createAnAuctionFor(nakamonstaId) {
   var contract = await NakamonstaAuction.deployed();
-  const startPrice = utils.toWei("1", "ether");
-  await contract.createAuction(nakamonstaId, startPrice, startPrice, 1000000);
+  const startPrice = web3.utils.toWei("1", "ether");
+  await contract.createAuction(nakamonstaId, startPrice, startPrice, 1000000);  
   console.log("Create an auction on: " + nakamonstaId);
 }
 
 async function mate(fatherId, motherId) {
   var contract = await NakamonstaAuction.deployed();
-  await contract.mate(fatherId, motherId, { value: utils.toWei("0.01", "ether") });
+//*  await contract.mate(fatherId, motherId, { value: web3.utils.toWei("0.01", "ether") }, {_to:accounts[0]});
+  console.log("A baby is born - Pre");
+  await contract.mate(fatherId, motherId, { value: web3.utils.toWei("0.01", "ether") });
   console.log("A baby is born");
 }
 
@@ -140,5 +142,6 @@ module.exports = function(callback) {
   createSomeRandomGen1(18);
   transferSomeToAccount1();
   createAnAuctionFor(0);
-  mate(4, 5);
+//*  mate(4, 5);
+//*  mate(2, 3);
 };

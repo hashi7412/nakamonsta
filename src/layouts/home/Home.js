@@ -24,7 +24,7 @@ class Home extends Component {
           <div>
             <div className={classes.layout}>
               <div>
-                <h1>Nakamonsta tokens</h1>
+                <h1>BeauMind Tokens</h1>
               </div>
               <div>
                 Total Supply:{" "}

@@ -20,7 +20,7 @@ module.exports = {
     development: {
       host: "127.0.0.1",
       network_id: "*", // Match any network id
-      port: 8545
+      port: 8545,
     },
     ropstenInfura: {
       provider: function() {
@@ -29,7 +29,7 @@ module.exports = {
           "https://ropsten.infura.io/v3/" + process.env.INFURA_PROJECT_ID
         );
       },
-      network_id: "3"
+      network_id: "3",
     },
     ropstenLocal: {
       from: "0xde7ec724235b6aa0a37a0e3b4605a22cb3dd9b2d",
@@ -37,7 +37,7 @@ module.exports = {
       port: 8545,
       network_id: "*",
       gas: 5000000,
-      gasPrice: 10000000000
+      gasPrice: 10000000000,
     },
     live: {
       from: "0xde7ec724235b6aa0a37a0e3b4605a22cb3dd9b2d",
@@ -45,12 +45,12 @@ module.exports = {
       port: 8545,
       network_id: "*",
       gas: 500000,
-      gasPrice: 1000000000
-    }
+      gasPrice: 1000000000,
+    },
   },
   compilers: {
     solc: {
-      version: "0.4.25"
-    }
-  }
+      version: "0.4.24",
+    },
+  },
 };
