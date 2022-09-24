@@ -24,9 +24,9 @@
     }
   },
   "dependencies": {
-    "@material-ui/core": "^3.5.1",
-    "autoprefixer": "^9.3.1",
-    "babel-core": "6.26.0",
+    "@material-ui/core": "^4.12.4",
+    "autoprefixer": "^10.4.11",
+    "babel-core": "6.26.3",
     "babel-eslint": "7.2.3",
     "babel-jest": "20.0.3",
     "babel-loader": "7.1.2",
